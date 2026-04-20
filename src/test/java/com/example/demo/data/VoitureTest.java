@@ -28,4 +28,20 @@ public class VoitureTest {
         assertEquals(0, v.getId());
     }
 
+    @Test
+    void testerSetGetId() {
+        Voiture v = new Voiture();
+        v.setId(1);
+
+        assertEquals(1, v.getId());
+    }
+
+    @Test
+    void testerSetGetMarque() {
+        Voiture v = new Voiture();
+        v.setMarque("Renault");
+
+        assertEquals("Renault", v.getMarque());
+    }
+
 }
