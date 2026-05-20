@@ -2,7 +2,7 @@ package com.example.demo.data;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.*;
+// import org.springframework.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -42,6 +42,22 @@ public class VoitureTest {
         v.setMarque("Renault");
 
         assertEquals("Renault", v.getMarque());
+    }
+
+    @Test
+    void testerSetGetPrix() {
+        Voiture v = new Voiture();
+        v.setPrix(20000);
+
+        assertEquals(20000, v.getPrix());
+    }
+
+    @Test
+    void testerToString() {
+        Voiture v = new Voiture("BMW", 30000);
+        v.setId(2);
+
+        assertEquals("Car{marque='BMW', prix=30000, id=2}", v.toString());
     }
 
 }
